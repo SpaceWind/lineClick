@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>target-512.png</file>
+        <file>balance.txt</file>
+        <file>empty_star.png</file>
+        <file>red_star.ico</file>
+        <file>gold.png</file>
+    </qresource>
+</RCC>
