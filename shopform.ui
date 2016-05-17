@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>569</width>
-    <height>390</height>
+    <width>603</width>
+    <height>387</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,7 +21,7 @@
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
       <item row="3" column="8">
-       <widget class="QLabel" name="label_30">
+       <widget class="QLabel" name="crit_8">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -47,7 +47,7 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QLabel" name="label_3">
+       <widget class="QLabel" name="dmg_1">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -66,7 +66,7 @@
        </widget>
       </item>
       <item row="0" column="4">
-       <widget class="QLabel" name="label_6">
+       <widget class="QLabel" name="dmg_4">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -85,7 +85,7 @@
        </widget>
       </item>
       <item row="0" column="2">
-       <widget class="QLabel" name="label_4">
+       <widget class="QLabel" name="dmg_2">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -104,7 +104,7 @@
        </widget>
       </item>
       <item row="0" column="3">
-       <widget class="QLabel" name="label_5">
+       <widget class="QLabel" name="dmg_3">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -123,7 +123,7 @@
        </widget>
       </item>
       <item row="4" column="1">
-       <widget class="QLabel" name="label_29">
+       <widget class="QLabel" name="splash_1">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -142,7 +142,7 @@
        </widget>
       </item>
       <item row="0" column="8">
-       <widget class="QLabel" name="label_10">
+       <widget class="QLabel" name="dmg_8">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -161,7 +161,7 @@
        </widget>
       </item>
       <item row="2" column="6">
-       <widget class="QLabel" name="label_13">
+       <widget class="QLabel" name="onhit_6">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -180,7 +180,7 @@
        </widget>
       </item>
       <item row="2" column="7">
-       <widget class="QLabel" name="label_12">
+       <widget class="QLabel" name="onhit_7">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -199,7 +199,7 @@
        </widget>
       </item>
       <item row="2" column="5">
-       <widget class="QLabel" name="label_14">
+       <widget class="QLabel" name="onhit_5">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -218,7 +218,7 @@
        </widget>
       </item>
       <item row="0" column="6">
-       <widget class="QLabel" name="label_8">
+       <widget class="QLabel" name="dmg_6">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -237,7 +237,7 @@
        </widget>
       </item>
       <item row="0" column="5">
-       <widget class="QLabel" name="label_7">
+       <widget class="QLabel" name="dmg_5">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -256,7 +256,7 @@
        </widget>
       </item>
       <item row="6" column="6">
-       <widget class="QLabel" name="label_53">
+       <widget class="QLabel" name="currenthp_6">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -275,7 +275,7 @@
        </widget>
       </item>
       <item row="6" column="7">
-       <widget class="QLabel" name="label_54">
+       <widget class="QLabel" name="currenthp_7">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -294,7 +294,7 @@
        </widget>
       </item>
       <item row="6" column="1">
-       <widget class="QLabel" name="label_48">
+       <widget class="QLabel" name="currenthp_1">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -313,7 +313,7 @@
        </widget>
       </item>
       <item row="6" column="3">
-       <widget class="QLabel" name="label_50">
+       <widget class="QLabel" name="currenthp_3">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -332,7 +332,7 @@
        </widget>
       </item>
       <item row="6" column="8">
-       <widget class="QLabel" name="label_55">
+       <widget class="QLabel" name="currenthp_8">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -351,7 +351,7 @@
        </widget>
       </item>
       <item row="2" column="4">
-       <widget class="QLabel" name="label_15">
+       <widget class="QLabel" name="onhit_4">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -370,7 +370,7 @@
        </widget>
       </item>
       <item row="0" column="7">
-       <widget class="QLabel" name="label_9">
+       <widget class="QLabel" name="dmg_7">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -389,7 +389,7 @@
        </widget>
       </item>
       <item row="5" column="2">
-       <widget class="QLabel" name="label_40">
+       <widget class="QLabel" name="maxhp_2">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -408,7 +408,7 @@
        </widget>
       </item>
       <item row="3" column="7">
-       <widget class="QLabel" name="label_31">
+       <widget class="QLabel" name="crit_7">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -427,7 +427,7 @@
        </widget>
       </item>
       <item row="2" column="1">
-       <widget class="QLabel" name="label_17">
+       <widget class="QLabel" name="onhit_1">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -467,7 +467,7 @@
        </widget>
       </item>
       <item row="4" column="4">
-       <widget class="QLabel" name="label_26">
+       <widget class="QLabel" name="splash_4">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -486,7 +486,7 @@
        </widget>
       </item>
       <item row="2" column="2">
-       <widget class="QLabel" name="label_16">
+       <widget class="QLabel" name="onhit_2">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -505,7 +505,7 @@
        </widget>
       </item>
       <item row="2" column="3">
-       <widget class="QLabel" name="label_19">
+       <widget class="QLabel" name="onhit_3">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -524,7 +524,7 @@
        </widget>
       </item>
       <item row="2" column="8">
-       <widget class="QLabel" name="label_11">
+       <widget class="QLabel" name="onhit_8">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -550,7 +550,7 @@
        </widget>
       </item>
       <item row="4" column="8">
-       <widget class="QLabel" name="label_20">
+       <widget class="QLabel" name="splash_8">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -569,7 +569,7 @@
        </widget>
       </item>
       <item row="3" column="6">
-       <widget class="QLabel" name="label_32">
+       <widget class="QLabel" name="crit_6">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -588,7 +588,7 @@
        </widget>
       </item>
       <item row="3" column="5">
-       <widget class="QLabel" name="label_33">
+       <widget class="QLabel" name="crit_5">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -614,7 +614,7 @@
        </widget>
       </item>
       <item row="3" column="3">
-       <widget class="QLabel" name="label_35">
+       <widget class="QLabel" name="crit_3">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -633,7 +633,7 @@
        </widget>
       </item>
       <item row="3" column="2">
-       <widget class="QLabel" name="label_37">
+       <widget class="QLabel" name="crit_2">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -652,7 +652,7 @@
        </widget>
       </item>
       <item row="3" column="4">
-       <widget class="QLabel" name="label_34">
+       <widget class="QLabel" name="crit_4">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -671,7 +671,7 @@
        </widget>
       </item>
       <item row="3" column="1">
-       <widget class="QLabel" name="label_36">
+       <widget class="QLabel" name="crit_1">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -690,7 +690,7 @@
        </widget>
       </item>
       <item row="4" column="5">
-       <widget class="QLabel" name="label_25">
+       <widget class="QLabel" name="splash_5">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -709,7 +709,7 @@
        </widget>
       </item>
       <item row="5" column="3">
-       <widget class="QLabel" name="label_41">
+       <widget class="QLabel" name="maxhp_3">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -728,7 +728,7 @@
        </widget>
       </item>
       <item row="5" column="8">
-       <widget class="QLabel" name="label_46">
+       <widget class="QLabel" name="maxhp_8">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -754,7 +754,7 @@
        </widget>
       </item>
       <item row="4" column="6">
-       <widget class="QLabel" name="label_24">
+       <widget class="QLabel" name="splash_6">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -773,7 +773,7 @@
        </widget>
       </item>
       <item row="4" column="7">
-       <widget class="QLabel" name="label_21">
+       <widget class="QLabel" name="splash_7">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -799,7 +799,7 @@
        </widget>
       </item>
       <item row="4" column="3">
-       <widget class="QLabel" name="label_27">
+       <widget class="QLabel" name="splash_3">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -818,7 +818,7 @@
        </widget>
       </item>
       <item row="4" column="2">
-       <widget class="QLabel" name="label_28">
+       <widget class="QLabel" name="splash_2">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -837,7 +837,7 @@
        </widget>
       </item>
       <item row="5" column="1">
-       <widget class="QLabel" name="label_39">
+       <widget class="QLabel" name="maxhp_1">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -856,7 +856,7 @@
        </widget>
       </item>
       <item row="5" column="6">
-       <widget class="QLabel" name="label_44">
+       <widget class="QLabel" name="maxhp_6">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -875,7 +875,7 @@
        </widget>
       </item>
       <item row="5" column="7">
-       <widget class="QLabel" name="label_45">
+       <widget class="QLabel" name="maxhp_7">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -894,7 +894,7 @@
        </widget>
       </item>
       <item row="5" column="4">
-       <widget class="QLabel" name="label_42">
+       <widget class="QLabel" name="maxhp_4">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -913,7 +913,7 @@
        </widget>
       </item>
       <item row="5" column="5">
-       <widget class="QLabel" name="label_43">
+       <widget class="QLabel" name="maxhp_5">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -932,7 +932,7 @@
        </widget>
       </item>
       <item row="8" column="8">
-       <widget class="QLabel" name="label_73">
+       <widget class="QLabel" name="armpen_8">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -951,7 +951,7 @@
        </widget>
       </item>
       <item row="6" column="2">
-       <widget class="QLabel" name="label_49">
+       <widget class="QLabel" name="currenthp_2">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -970,7 +970,7 @@
        </widget>
       </item>
       <item row="6" column="5">
-       <widget class="QLabel" name="label_52">
+       <widget class="QLabel" name="currenthp_5">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -989,7 +989,7 @@
        </widget>
       </item>
       <item row="6" column="4">
-       <widget class="QLabel" name="label_51">
+       <widget class="QLabel" name="currenthp_4">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1008,7 +1008,7 @@
        </widget>
       </item>
       <item row="7" column="1">
-       <widget class="QLabel" name="label_57">
+       <widget class="QLabel" name="executehp_1">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1027,7 +1027,7 @@
        </widget>
       </item>
       <item row="7" column="3">
-       <widget class="QLabel" name="label_59">
+       <widget class="QLabel" name="executehp_3">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1046,7 +1046,7 @@
        </widget>
       </item>
       <item row="7" column="4">
-       <widget class="QLabel" name="label_60">
+       <widget class="QLabel" name="executehp_4">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1065,7 +1065,7 @@
        </widget>
       </item>
       <item row="7" column="5">
-       <widget class="QLabel" name="label_61">
+       <widget class="QLabel" name="executehp_5">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1084,7 +1084,7 @@
        </widget>
       </item>
       <item row="7" column="6">
-       <widget class="QLabel" name="label_62">
+       <widget class="QLabel" name="executehp_6">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1103,7 +1103,7 @@
        </widget>
       </item>
       <item row="7" column="7">
-       <widget class="QLabel" name="label_63">
+       <widget class="QLabel" name="executehp_7">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1122,7 +1122,7 @@
        </widget>
       </item>
       <item row="7" column="8">
-       <widget class="QLabel" name="label_64">
+       <widget class="QLabel" name="executehp_8">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1148,7 +1148,7 @@
        </widget>
       </item>
       <item row="7" column="2">
-       <widget class="QLabel" name="label_58">
+       <widget class="QLabel" name="executehp_2">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1167,7 +1167,7 @@
        </widget>
       </item>
       <item row="8" column="3">
-       <widget class="QLabel" name="label_68">
+       <widget class="QLabel" name="armpen_3">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1186,7 +1186,7 @@
        </widget>
       </item>
       <item row="8" column="1">
-       <widget class="QLabel" name="label_66">
+       <widget class="QLabel" name="armpen_1">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1205,7 +1205,7 @@
        </widget>
       </item>
       <item row="8" column="5">
-       <widget class="QLabel" name="label_70">
+       <widget class="QLabel" name="armpen_5">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1224,7 +1224,7 @@
        </widget>
       </item>
       <item row="8" column="2">
-       <widget class="QLabel" name="label_67">
+       <widget class="QLabel" name="armpen_2">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1243,7 +1243,7 @@
        </widget>
       </item>
       <item row="9" column="2">
-       <widget class="QLabel" name="label_76">
+       <widget class="QLabel" name="percentarmpen_2">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1262,7 +1262,7 @@
        </widget>
       </item>
       <item row="9" column="4">
-       <widget class="QLabel" name="label_78">
+       <widget class="QLabel" name="percentarmpen_4">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1281,7 +1281,7 @@
        </widget>
       </item>
       <item row="9" column="5">
-       <widget class="QLabel" name="label_79">
+       <widget class="QLabel" name="percentarmpen_5">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1300,7 +1300,7 @@
        </widget>
       </item>
       <item row="9" column="3">
-       <widget class="QLabel" name="label_77">
+       <widget class="QLabel" name="percentarmpen_3">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1319,7 +1319,7 @@
        </widget>
       </item>
       <item row="8" column="6">
-       <widget class="QLabel" name="label_71">
+       <widget class="QLabel" name="armpen_6">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1338,7 +1338,7 @@
        </widget>
       </item>
       <item row="8" column="7">
-       <widget class="QLabel" name="label_72">
+       <widget class="QLabel" name="armpen_7">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1357,7 +1357,7 @@
        </widget>
       </item>
       <item row="9" column="1">
-       <widget class="QLabel" name="label_75">
+       <widget class="QLabel" name="percentarmpen_1">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1376,7 +1376,7 @@
        </widget>
       </item>
       <item row="8" column="4">
-       <widget class="QLabel" name="label_69">
+       <widget class="QLabel" name="armpen_4">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1395,7 +1395,7 @@
        </widget>
       </item>
       <item row="9" column="6">
-       <widget class="QLabel" name="label_80">
+       <widget class="QLabel" name="percentarmpen_6">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1414,7 +1414,7 @@
        </widget>
       </item>
       <item row="9" column="7">
-       <widget class="QLabel" name="label_81">
+       <widget class="QLabel" name="percentarmpen_7">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1433,7 +1433,7 @@
        </widget>
       </item>
       <item row="9" column="8">
-       <widget class="QLabel" name="label_82">
+       <widget class="QLabel" name="percentarmpen_8">
         <property name="maximumSize">
          <size>
           <width>32</width>
@@ -1452,7 +1452,7 @@
        </widget>
       </item>
       <item row="0" column="9">
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="button_damage">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -1469,7 +1469,7 @@
        </widget>
       </item>
       <item row="2" column="9">
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QPushButton" name="button_onhit">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -1486,7 +1486,7 @@
        </widget>
       </item>
       <item row="3" column="9">
-       <widget class="QPushButton" name="pushButton_4">
+       <widget class="QPushButton" name="button_crit">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -1503,7 +1503,7 @@
        </widget>
       </item>
       <item row="4" column="9">
-       <widget class="QPushButton" name="pushButton_5">
+       <widget class="QPushButton" name="button_splash">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -1520,7 +1520,7 @@
        </widget>
       </item>
       <item row="5" column="9">
-       <widget class="QPushButton" name="pushButton_6">
+       <widget class="QPushButton" name="button_maxhp">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -1537,7 +1537,7 @@
        </widget>
       </item>
       <item row="6" column="9">
-       <widget class="QPushButton" name="pushButton_7">
+       <widget class="QPushButton" name="button_currenthp">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -1554,7 +1554,7 @@
        </widget>
       </item>
       <item row="7" column="9">
-       <widget class="QPushButton" name="pushButton_8">
+       <widget class="QPushButton" name="button_executehp">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -1571,7 +1571,7 @@
        </widget>
       </item>
       <item row="8" column="9">
-       <widget class="QPushButton" name="pushButton_9">
+       <widget class="QPushButton" name="button_armpen">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
           <horstretch>0</horstretch>
@@ -1588,7 +1588,7 @@
        </widget>
       </item>
       <item row="9" column="9">
-       <widget class="QPushButton" name="pushButton_10">
+       <widget class="QPushButton" name="button_percentarmpen">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
           <horstretch>0</horstretch>
