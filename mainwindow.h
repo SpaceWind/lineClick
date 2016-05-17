@@ -8,6 +8,7 @@
 #include <QProgressBar>
 #include <QTimer>
 #include <QResizeEvent>
+#include "shopform.h"
 #include "linedescriptor.h"
 
 namespace Ui {
@@ -28,11 +29,10 @@ public:
 
     void keyPress(QKeyEvent * key);
 public slots:
-    bool eventFilter(QObject *, QEvent * event);
+    bool eventFilter(QObject *object, QEvent * event);
     void gameTimerTick();
     void nextLevelTick();
     void scoresTimerTick();
-    void resizeEvent(QResizeEvent * event);
 
 private slots:
     void on_pushButton_clicked();
@@ -48,7 +48,10 @@ private:
     QTimer * gameTimer;
     QTimer * nextLevelTimer;
     QTimer * scoresTimer;
+    ShopForm * shopForm;
     double currentLevel;
+    int inactivatedLinesCount;
+    double totalScore;
 };
 
 #endif // MAINWINDOW_H

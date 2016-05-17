@@ -26,7 +26,7 @@ struct Shop
     QHash<QString,int> levels;
     double currentValue;
 
-    DamageEffect upgrade(DamageEffect dmg, QString effect);
+    void upgrade(DamageEffect* dmg, QString effect);
 };
 
 struct LineDescriptor

@@ -9,16 +9,13 @@
 #include <QFile>
 #include <QGestureEvent>
 #include <QGesture>
+#include <QMessageBox>
+#include "shopform.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-    grabGesture(Qt::SwipeGesture);
-    grabGesture(Qt::PanGesture);
-
-    setAttribute(Qt::WA_AcceptTouchEvents);
-
     ui->setupUi(this);
     ui->pushButton->installEventFilter(this);
     for (int i = 0; i<7; ++i)
@@ -29,9 +26,9 @@ MainWindow::MainWindow(QWidget *parent) :
     gameTimer = new QTimer();
     gameTimer->setInterval(100);
     nextLevelTimer = new QTimer();
-    nextLevelTimer->setInterval(60000);
+    nextLevelTimer->setInterval(100000);
     scoresTimer = new QTimer();
-    scoresTimer->setInterval(200);
+    scoresTimer->setInterval(500);
 
     connect(nextLevelTimer,SIGNAL(timeout()),this,SLOT(nextLevelTick()));
     connect(scoresTimer,SIGNAL(timeout()),this,SLOT(scoresTimerTick()));
@@ -39,16 +36,11 @@ MainWindow::MainWindow(QWidget *parent) :
     gameTimer->start();
     scoresTimer->start();
     nextLevelTimer->start();
-    this->grabGesture(Qt::SwipeGesture);
-    QList<QWidget*> c = this->findChildren<QWidget*>();
-    for (int i = 0; i< c.count(); i++)
-    {
-        c[i]->installEventFilter(this);
-        c[i]->setAttribute(Qt::WA_AcceptTouchEvents);
-        c[i]->grabGesture(Qt::SwipeGesture);
-        c[i]->grabGesture(Qt::PanGesture);
-    }
     currentLevel = 1.0;
+    shopForm = new ShopForm(&shop, &dmg);
+    inactivatedLinesCount = 0;
+    totalScore = 0;
+  //  shop.currentValue = 9999;
 }
 
 MainWindow::~MainWindow()
@@ -101,7 +93,7 @@ void MainWindow::initLines()
     shop.prices["executehpdmg"] = configToArray(pricesObject,"executehpdmg");
     shop.prices["armpen"] = configToArray(pricesObject,"armpen");
     shop.prices["percentarmpen"] = configToArray(pricesObject,"percentarmpen");
-    shop.upgrade(dmg,"init");
+    shop.upgrade(&dmg,"init");
     balanceFile.close();
 }
 
@@ -136,33 +128,17 @@ QList<double> MainWindow::configToArray(QJsonObject root, QString name)
     return result;
 }
 
-bool MainWindow::eventFilter(QObject *, QEvent *event)
+bool MainWindow::eventFilter(QObject * object, QEvent *event)
 {
     if(event->type() == QEvent::KeyPress)
     {
         keyPress(static_cast<QKeyEvent*>(event));
     }
-    if (event->type() == QEvent::Gesture)
+    else if (event->type() == QEvent::FocusOut)
     {
-        QGestureEvent * gEvent = static_cast<QGestureEvent*>(event);
-        if (QGesture *swipe = gEvent->gesture(Qt::SwipeGesture))
-        {
-            QSwipeGesture * swipeGesture = static_cast<QSwipeGesture *>(swipe);
-            if (swipeGesture->horizontalDirection() == QSwipeGesture::Left)
-            {
-                currentPos -=1;
-                if (currentPos < 0)
-                    currentPos = 6;
-                ui->pushButton->move(getPBByIndex(currentPos)->geometry().left()-ui->groupBox->geometry().left(), ui->pushButton->geometry().top());
-            }
-            else if (swipeGesture->horizontalDirection() == QSwipeGesture::Right)
-            {
-                currentPos +=1;
-                if (currentPos > 6)
-                    currentPos = 0;
-                ui->pushButton->move(getPBByIndex(currentPos)->geometry().left()-ui->groupBox->geometry().left(), ui->pushButton->geometry().top());
-            }
-        }
+        shopForm->updateStarsUI();
+        qDebug() << "updated from" << object << rand()%100;
+
     }
     return false;
 }
@@ -185,7 +161,6 @@ void MainWindow::keyPress(QKeyEvent *key)
     }
     else if (key->key() == Qt::Key_P)
     {
-        qDebug() <<"pause pressed" << key->type();
         if (gameTimer->isActive())
             gameTimer->stop();
         else
@@ -208,6 +183,13 @@ void MainWindow::gameTimerTick()
         {
             getPBByIndex(index)->setStyleSheet("QProgressBar{border: 1px solid grey;border-radius: 6px;background-color: #DDDDDD;}QProgressBar::chunk {background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(160, 120, 170, 255), stop:1 rgba(170, 138, 180, 255));border-radius: 6px;}");
             lines[index].isActive = false;
+            inactivatedLinesCount++;
+            if (inactivatedLinesCount > 6)
+            {
+                QMessageBox::information(this,"GAME OVER", "You have lost the game and reached " + QString::number(currentLevel) +" level with " + QString::number(int(totalScore)) + " scores! Congratulations");
+                gameTimer->stop();
+                qApp->quit();
+            }
         }
         index++;
     }
@@ -217,9 +199,9 @@ void MainWindow::nextLevelTick()
 {
     for (int i =0; i< lines.count(); i++)
     {
-        lines[i].armor = lines[i].armor * 110/100;
-        lines[i].speed = lines[i].speed * 110/100;
-        lines[i].maxhp = lines[i].maxhp * 110/100;
+        lines[i].armor = lines[i].armor * 110/100 + 1;
+        lines[i].speed = lines[i].speed * 110/100 + 1;
+        lines[i].maxhp = lines[i].maxhp * 110/100 + 1;
         getPBByIndex(i)->setMaximum(lines[i].maxhp);
     }
     currentLevel += 1.0;
@@ -228,6 +210,10 @@ void MainWindow::nextLevelTick()
 
 void MainWindow::scoresTimerTick()
 {
+    if (!gameTimer->isActive())
+        return;
+
+
     int totalHp=0, currentHp = 0;
     foreach (const LineDescriptor &l, lines)
     {
@@ -238,14 +224,10 @@ void MainWindow::scoresTimerTick()
     double ffCoef = double(currentHp)/double(totalHp);
     ffCoef *= pow(1.1,currentLevel);
     shop.currentValue += ffCoef * 0.666;
+    totalScore += ffCoef * 0.666;
     ui->label_2->setText("Очки: " + QString::number(int(shop.currentValue)));
 }
 
-void MainWindow::resizeEvent(QResizeEvent *event)
-{
-    //ui->pushButton->setMinimumWidth(ui->progressBar->width()*75/100);
-    //ui->pushButton->setMinimumHeight(ui->progressBar->width()*50/100);
-}
 
 void MainWindow::on_pushButton_clicked()
 {
@@ -271,7 +253,10 @@ void MainWindow::on_pushButton_clicked()
     }
     lines[currentPos].hp -= damage;
     if (lines[currentPos].hp > 0)
+    {
         shop.currentValue += double(damage)*0.015;
+        totalScore += double(damage)*0.015;
+    }
     foreach (const int &l, linesNeedToUpdate)
         getPBByIndex(l)->setValue(lines[l].hp);
     ui->label->setText("DMG: " + QString::number(damage) + " hp=" + QString::number(lines[currentPos].hp));
@@ -279,5 +264,11 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_label_3_linkActivated(const QString &link)
 {
+    if (link == "shop")
+    {
+        gameTimer->stop();
+        shopForm->updateStarsUI();
+        shopForm->show();
+    }
     qDebug() << "link:" << link;
 }
