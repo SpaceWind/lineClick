@@ -109,7 +109,7 @@ void ShopForm::on_button_currenthp_clicked()
 {
     shop->upgrade(dmg, "currenthpdamage");
     updateStarsUI();
-    //jhgjhgjhgjglkjk
+    //d
 }
 
 void ShopForm::on_button_executehp_clicked()
